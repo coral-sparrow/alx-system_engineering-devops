@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# script printing all processes(even with no tty) in user orianted format and show hirearchy and extract bash processes
+# shellcheck disable=SC2009
+echo $$ > /var/run/myscript.pid
+
+handle_sigterm () {
+	rm '/var/run/myscript.pid'
+	echo "I hate the kill command"
+	exit
+}
+
+handle_sigquit () {
+	rm '/var/run/myscript.pid'
+	exit
+}
+
+handle_sigint () {
+	echo "Y U no love me?!"
+	exit
+}
+
+trap handle_sigterm SIGTERM
+trap handle_sigint SIGINT
+trap handle_sigquit SIGQUIT
+
+for ((;;));
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
