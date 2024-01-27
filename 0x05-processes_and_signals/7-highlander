@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # script to handle SIGINT Ctrl + C signal
-trap 'echo "I am invincible!!!"' SIGINT
+trap 'echo "I am invincible!!!"' SIGTERM
 for ((;;));
 do
 	echo "To infinity and beyond"
