@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * infinite_while - Entry point
@@ -32,7 +33,10 @@ int main(void)
 	for (i = 0; i < 5; i++)
 	{
 		pid = fork();
-		printf("Zombie process created, PID: %ld\n", pid);
+		if (pid != 0)
+			printf("Zombie process created, PID: %d\n", pid);
+		else if (pid == 0)
+			exit(EXIT_SUCCESS);
 	}
 
 	infinite_while();
