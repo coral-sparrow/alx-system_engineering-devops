@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# script to handle SIGINT Ctrl + C signal
+trap 'echo "I am invincible!!!"' SIGINT
+for ((;;));
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
