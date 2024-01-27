@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# script printing all processes(even with no tty) in user orianted format and show hirearchy
+ps -eH u | grep bash
