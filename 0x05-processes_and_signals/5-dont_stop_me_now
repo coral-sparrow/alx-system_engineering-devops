@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that stops another script
+# shellcheck disable=SC2009
+kill "$(ps -ef | grep 4-to | awk '/bash .*/ {print $2}')"
