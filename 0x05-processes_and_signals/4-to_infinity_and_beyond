@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# script printing "To infinity and beyond" indefinitly 
+for ((;;));
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
