@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# script printing all processes(even with no tty) in user orianted format and show hirearchy
+# script printing all processes(even with no tty) in user orianted format and show hirearchy and extract bash processes
 # shellcheck disable=SC2009
 ps -eH u | grep bash
