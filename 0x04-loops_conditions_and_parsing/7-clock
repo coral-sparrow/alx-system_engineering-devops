@@ -2,6 +2,7 @@
 # loops scripts
 # shellcheck disable=SC2034
 h=1
+echo "Hour: 0"
 while [ "$h" -le 13 ];
 do
 	i=1
