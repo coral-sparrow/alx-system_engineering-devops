@@ -11,7 +11,7 @@ do
 		echo "Buzz"
 	elif [ "$((i%3))" -eq 0 ];
 	then 
-		echo ""Fizz
+		echo "Fizz"
 	else
 		echo "$i"
 	fi
