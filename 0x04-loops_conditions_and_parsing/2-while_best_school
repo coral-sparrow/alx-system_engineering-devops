@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# loops scripts
+# shellcheck disable=SC2034
+i=0
+while [ "$i" -lt 10 ];
+do
+	echo "Best School"
+	((++i))
+done
