@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# script printing all processes(even with no tty) in user orianted format and show hirearchy
+while :;
+do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
+done
+
+
