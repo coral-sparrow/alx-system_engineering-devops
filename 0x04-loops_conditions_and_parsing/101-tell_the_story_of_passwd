@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#set -x
+# loops scripts
+# shellcheck disable=SC2027 disable=SC2046 disable=SC2005
+function get_field() {
+	echo "$(echo "$1" | cut -d ':' -f "$2")"
+}
+
+filename="/etc/passwd"
+while IFS= read -r line;
+do
+	echo "The user "$(get_field "$line" 1)" is part of the "$(get_field "$line" 4)" gang, lives in "$(get_field "$line" 6)" and rides "$(get_field "$line" 7)". "$(get_field "$line" 3)"'s place is protected by the passcode "$(get_field "$line" 2)", more info about the user here: "$(get_field "$line" 5)""
+	
+done < "$filename"
+
+
