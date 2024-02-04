@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -type f | tr -d './' | sort -nr | head -n 10 | sort -n
+ls --sort=time | tr ' ' '/n' | head -n 10
