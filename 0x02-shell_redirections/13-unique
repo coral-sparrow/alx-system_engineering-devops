@@ -1,2 +1,2 @@
-#!/bin/bash
-read -a words
+#!/usr/bin/env bash
+sort | uniq -u
