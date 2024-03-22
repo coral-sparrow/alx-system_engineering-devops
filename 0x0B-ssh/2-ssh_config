@@ -1,0 +1,3 @@
+Host 98.98.98.98
+    BatchMode   yes
+    IdentityFile    ~/.ssh/school
